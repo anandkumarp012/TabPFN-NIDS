@@ -29,7 +29,12 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "jupyter"]
+dev = ["pytest", "pytest-asyncio", "jupyter"]
+live = [
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.29",
+    "websockets>=12.0",
+]
 
 [project.urls]
 Repository = "https://github.com/Sujeethh03/TabPFN-NIDS"
@@ -40,6 +45,7 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q -m 'not slow'"
+asyncio_mode = "auto"
 markers = [
     "slow: runs real TabPFN inference; deselected by default",
 ]

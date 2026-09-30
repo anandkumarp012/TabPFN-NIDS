@@ -54,3 +54,5 @@ venv/
 
 !.gitkeep
 !**/.gitkeep
+# Node.js dependencies
+node_modules/
