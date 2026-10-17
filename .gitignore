@@ -122,3 +122,5 @@ Desktop.ini
 
 !.gitkeep
 !**/.gitkeep
+
+database-service/package-lock.backup.json
